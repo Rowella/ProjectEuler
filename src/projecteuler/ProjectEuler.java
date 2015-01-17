@@ -19,20 +19,34 @@ public class ProjectEuler {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(pythagTriplet(1000));
-        
+        System.out.println(triangleDivisors(500));
         // TODO code application logic here
     }
     
-    public static int pythagTriplet(int sum) {
-        for (int i = 1; i<= sum; i++){
-            for (int j = 1; j <= sum; j++) {
-                if (((i*i)+(j*j)) == ((sum-i-j)*(sum-i-j))) {
-                    return i*j*(sum-i-j);
+    public static long triangleNumber(int num) {
+        if (num == 1) {
+            return 1;
+        } else {
+            return num + triangleNumber(num-1);
+        }
+    }
+    
+    public static long triangleDivisors(int divisorNo) {
+        int divisors = 0;
+        int num = 0;
+        long currentNo = 0;
+        while (divisors < divisorNo) {
+            divisors = 0;
+            num++;
+            currentNo = triangleNumber(num);
+            for (int i = 1; i<=(currentNo); i++){
+                if (currentNo%i == 0) {
+                    divisors++;
                 }
             }
+            System.out.println(currentNo);
         }
-        return 0;
+        return currentNo;
     }
         
     
