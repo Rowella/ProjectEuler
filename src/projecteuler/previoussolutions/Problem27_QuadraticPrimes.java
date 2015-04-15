@@ -12,7 +12,7 @@ import static java.lang.Math.sqrt;
  *
  * @author alex
  */
-public class ProjectEuler {
+public class ProjectEuer {
     /**
      * @param args the command line arguments
      */
