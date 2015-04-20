@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projecteuler;
+package projecteuler.previoussolutions;
 
 
 import static java.lang.Math.sqrt;
@@ -12,7 +12,7 @@ import static java.lang.Math.sqrt;
  *
  * @author alex
  */
-public class ProjectEuler {
+public class Problem15_LatticePaths {
     /**
      * @param args the command line arguments
      */
